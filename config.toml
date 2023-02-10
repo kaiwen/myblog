@@ -1,0 +1,8 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = "superK's Blog"
+theme = 'ananke'
+
+[[params.ananke_socials]]
+name = "twitter"
+url = "https://twitter.com/KaiWen40789864"
