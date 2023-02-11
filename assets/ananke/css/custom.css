@@ -5,6 +5,10 @@
   -webkit-line-clamp: 6; /* number of lines to show */
           line-clamp: 6;
   -webkit-box-orient: vertical;
-  line-height: 1.7;
+  line-height: 1.75;
   font-size: large;
+}
+
+#blog-content > p {
+  line-height: 1.75;
 }
