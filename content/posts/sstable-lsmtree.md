@@ -2,7 +2,7 @@
 title: "SSTable和LSM Tree"
 date: 2023-02-12
 featured_image: '/images/sstable-lsmtree-1.jpg'
-draft: true
+draft: false
 ---
 对于大多数流行的大数据存储(如LeavelDB, RocksDB)来说，底层使用的存储方式都是LSM Tree。LSM Tree相比于B-Tree来说写入性能更好，因为其利用了磁盘的块顺序读写机制，也可以说是利用了局部性原理。LSM Tree主要使用SSTable作为主要结构，在此之上构建了一颗存储树。
 
