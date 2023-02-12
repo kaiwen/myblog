@@ -9,7 +9,7 @@ draft: true
 ## SSTable
 SSTable（Sorted String Table），顾名思义，是排好序的表，按key排序，存在于磁盘上时，也称为段(segment)，如下图所示，有三个段，即三个SSTable。
 
-![sstable](https://yetanotherdevblog.com/content/images/2020/06/output-onlinepngtools--3-.png)
+![sstable](/images/sstable-lsmtree-2.png)
 
 在内存中，段一般表示为一颗平衡树（术语memtable）。存储的时候，一个kv输入，内存的的平衡树更新自己，当达到某个大小阈值的时候，这棵平衡树则序列化到磁盘，成为了段。
 
@@ -22,7 +22,7 @@ SSTable（Sorted String Table），顾名思义，是排好序的表，按key排
 ## LSM Tree
 利用SSTable的合并原理，可以建造一颗有层级的树，每一层合并后的段交给下一层，这就是LSM Tree，如图。
 
-![lsmt](https://upload.wikimedia.org/wikipedia/commons/f/f2/LSM_Tree.png)
+![lsmt](/images/sstable-lsmtree-3.png)
 
 比如第一层有N个段，满了合并后交给第二层，同时第一层继续工作。第二层满了交给第三层，第三层满了交给第四层，以此类推。一层一层合并下去，合并的文件越来越大。
 
