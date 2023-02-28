@@ -2,7 +2,7 @@
 title: "多级回馈队列"
 date: 2023-02-27
 featured_image: '/images/mlfq-1.jpg'
-draft: true
+draft: false
 ---
 操作系统调度算法有很多种，Linux的[CFS](https://en.wikipedia.org/wiki/Completely_Fair_Scheduler)很出名，Windows的呢？今天来讲Windows的调度器，Windows 10中使用的就是它[^win]--多级回馈队列(**Multi Level Feedback Queue**)。
 
